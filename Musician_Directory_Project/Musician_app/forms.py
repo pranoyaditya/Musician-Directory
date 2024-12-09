@@ -8,7 +8,7 @@ class MusicianForm(forms.ModelForm):
         widgets = {
             'first_name' : forms.TextInput(attrs={'placeholeder' : 'First Name'}),
             'last_name' : forms.TextInput(attrs={'placeholder': 'Last Name'}),
-            'email' : forms.EmailField(attrs={'palceholder' : 'Email'}),
+            'email' : forms.EmailInput(attrs={'palceholder' : 'Email'}),
             'phone' : forms.TextInput(attrs={'palceholder' : 'Phone number'}),
             'instrument' : forms.TextInput(attrs={'palceholder' : 'Instrument'}),
         }
