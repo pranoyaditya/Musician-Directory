@@ -1,4 +1,8 @@
-from django.shortcuts import redirect,render
+from django.shortcuts import render
+from django.views.generic import ListView
+from Album_app.models import Album
 
-def home(request):
-    return render(request, 'homePage.html')
+class AlbumView(ListView):
+    template_name = 'homePage.html'
+    model = Album
+    context_object_name = 'albums'

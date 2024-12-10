@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic import CreateView, UpdateView, DeleteView
+from django.views.generic import CreateView, UpdateView
 from django.urls import reverse_lazy
 from .models import Musician
 from .forms import MusicianForm
@@ -19,13 +19,9 @@ class MusicianCreateView(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
     
 # class based view for updating musician.
-class UpdateMusician(UpdateView):
+class UpdateMusician(LoginRequiredMixin, UpdateView):
     model = Musician
     form_class = MusicianForm
     pk_url_kwarg = 'id'
     template_name = 'Musician_app/addMusician.html'
     success_url = reverse_lazy('home_page')
-
-# class based view for deleting musician.
-# class RemoveMusician(DeleteView):
-#     model = 
