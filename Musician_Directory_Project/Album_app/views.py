@@ -28,5 +28,6 @@ class EditAlbum(UpdateView):
 class DeleteAlbum(DeleteView):
     model = Album
     pk_url_kwarg = 'id'
+    template_name = 'Album_app/deleteAlbum.html'
     success_url = reverse_lazy('home_page')
     
