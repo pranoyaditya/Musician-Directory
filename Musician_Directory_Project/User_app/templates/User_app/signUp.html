@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}SignUp{% endblock title %}
+
+{% block content %}
+    <form method='post' style="width: 50%; margin: auto">
+        {% csrf_token %}
+        <h2>SignUp Page</h2>
+        {{form | crispy}}
+        <button class="btn btn-primary mb-4">Register</button>
+    </form>
+{% endblock content %}

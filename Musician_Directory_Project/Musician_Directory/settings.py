@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'Musician_app',
     'crispy_forms',
     'crispy_bootstrap5',
+    'User_app',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5',
