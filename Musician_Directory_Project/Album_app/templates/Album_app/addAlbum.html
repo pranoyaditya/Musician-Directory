@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
-{% block title %}Add Musician{% endblock title %}
+{% block title %}Add album{% endblock title %}
 
 {% block content %}
     <form method='post' style="width: 50%; margin: auto">
         {% csrf_token %}
-        <h2>Add a musician</h2>
+        <h2>Add an album</h2>
         {{form | crispy}}
         <button class="btn btn-primary">Add</button>
     </form>
