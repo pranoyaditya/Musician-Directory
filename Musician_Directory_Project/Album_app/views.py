@@ -14,3 +14,19 @@ class AddAlbum(CreateView):
 
     def form_valid(self, form):
         return super().form_valid(form)
+    
+class EditAlbum(UpdateView):
+    model = Album
+    form_class = AlbumForm
+    pk_url_kwarg = 'id'
+    template_name = 'Album_app/addAlbum.html'
+    success_url = reverse_lazy('home_page')
+
+    def form_valid(self, form):
+        return super().form_valid(form)
+    
+class DeleteAlbum(DeleteView):
+    model = Album
+    pk_url_kwarg = 'id'
+    success_url = reverse_lazy('home_page')
+    

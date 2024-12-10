@@ -20,7 +20,7 @@ from .import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home_page'),
+    path('', views.AlbumView.as_view(), name='home_page'),
     path('musician/', include('Musician_app.urls')),
     path('album/', include('Album_app.urls')),
     path('user/', include('User_app.urls')),

@@ -43,8 +43,8 @@
 
                 {% if user.is_authenticated %}
                 <td> 
-                    <a href="{% url 'Edit_Album' albumData.id %}">Edit</a>  
-                    <a href="{% url 'Delete_Album' albumData.id %}">Delete</a> 
+                    <a href="{% url 'edit_album' albumData.id %}">Edit</a>  
+                    <a href="{% url 'delete_album' albumData.id %}">Delete</a> 
                 </td>
                 {% endif%}
                 </tr>
