@@ -24,7 +24,7 @@
                 <th>{{albumData.id}}</th>
                 {% if user.is_authenticated %}
                 <td> 
-                    <a href=" {% url  'edit_musician' albumData.Musician.id %} ">  
+                    <a href=" {% url  'edit_musician' albumData.Musician.id %} " class="text-decoration-none">  
                     {{albumData.Musician.first_name}} 
                     {{albumData.Musician.last_name}}
                     </a>
@@ -36,15 +36,15 @@
                 </td>
                 {% endif %}
                 <td> {{albumData.Musician.email}} </td>
-                <td> {{albumData.rating}} </td>
+                <td> {{albumData.ratings}} </td>
                 <th> {{albumData.Musician.instrument}} </th>
                 <td> {{albumData.album_name}} </td>
                 <td> {{albumData.album_release_date}} </td>
 
                 {% if user.is_authenticated %}
                 <td> 
-                    <a href="{% url 'edit_album' albumData.id %}">Edit</a>  
-                    <a href="{% url 'delete_album' albumData.id %}">Delete</a> 
+                    <a href="{% url 'edit_album' albumData.id %}" class="text-decoration-none mr-4">Edit</a>  
+                    <a href="{% url 'delete_album' albumData.id %}" class="text-decoration-none">Delete</a> 
                 </td>
                 {% endif%}
                 </tr>

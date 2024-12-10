@@ -8,7 +8,7 @@ from django.urls import reverse_lazy
 class UserRegister(CreateView):
     form_class = RegisterForm
     template_name = 'User_app/signUp.html'
-    success_url = reverse_lazy('home_page')
+    success_url = reverse_lazy('user_login')
 
     def form_valid(self, form):
         return super().form_valid(form)
