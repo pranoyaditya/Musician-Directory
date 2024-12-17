@@ -15,6 +15,11 @@ class MusicianCreateView(LoginRequiredMixin, CreateView):
     template_name = 'Musician_app/addMusician.html'
     success_url = reverse_lazy('home_page')
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['type'] = 'Add'
+        return context
+
     def form_valid(self, form):
         return super().form_valid(form)
     
@@ -25,3 +30,8 @@ class UpdateMusician(LoginRequiredMixin, UpdateView):
     pk_url_kwarg = 'id'
     template_name = 'Musician_app/addMusician.html'
     success_url = reverse_lazy('home_page')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['type'] = 'Update'
+        return context

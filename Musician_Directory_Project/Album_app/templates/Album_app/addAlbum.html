@@ -3,10 +3,10 @@
 {% block title %}Add album{% endblock title %}
 
 {% block content %}
-    <form method='post' style="width: 50%; margin: auto">
+    <form method='post' style="width: 50%; margin: auto" class="text-white">
         {% csrf_token %}
-        <h2>Add an album</h2>
+        <h2>{{type}} an album</h2>
         {{form | crispy}}
-        <button class="btn btn-primary">Add</button>
+        <button class="btn btn-primary">{{type}}</button>
     </form>
 {% endblock content %}

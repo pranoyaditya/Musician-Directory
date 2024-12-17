@@ -3,10 +3,10 @@
 {% block title %}Add Musician{% endblock title %}
 
 {% block content %}
-    <form method='post' style="width: 50%; margin: auto">
+    <form method='post' style="width: 50%; margin: auto" class="text-white">
         {% csrf_token %}
-        <h2>Add a musician</h2>
+        <h2>{{type}} a musician</h2>
         {{form | crispy}}
-        <button class="btn btn-primary">Add</button>
+        <button class="btn btn-primary">{{type}}</button>
     </form>
 {% endblock content %}

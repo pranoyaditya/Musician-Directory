@@ -4,7 +4,7 @@
 {% block title %}SignUp{% endblock title %}
 
 {% block content %}
-    <form method='post' style="width: 50%; margin: auto">
+    <form method='post' style="width: 50%; margin: auto" class="text-white">
         {% csrf_token %}
         <h2>SignUp Page</h2>
         {{form | crispy}}
